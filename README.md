@@ -1,18 +1,11 @@
-# Kanban Board Application - DevOps Project 🚀
 
-## Project Overview
-A Kanban Board application built to showcase modern DevOps practices including CI/CD pipelines, Docker containerization, Kubernetes orchestration, and AWS cloud integration.
+# 🚀 Kanban Board Application (DevOps Project)
 
-## Features
-- Task Management (CRUD operations, Status management)
-- User Authentication (JWT-based security)
-- Serverless notifications (AWS Lambda & SES)
-- Containerization (Docker)
-- Orchestration (Kubernetes)
-- Infrastructure Automation (AWS CloudFormation)
+## 📌 Project Overview
+This project implements a Kanban board application with task management functionalities using Node.js, Express, MongoDB, Docker, and TypeScript.
 
-## Project Structure
-\```
+## 📁 Project Structure
+```
 kanban-board-app/
 ├── backend/
 │   ├── src/
@@ -27,54 +20,51 @@ kanban-board-app/
 │   └── tsconfig.json
 ├── docker-compose.yml
 └── README.md
-\```
+```
 
-## Tech Stack
-- **Backend**: Node.js, Express, TypeScript
-- **Database**: MongoDB
-- **Authentication**: JWT & bcryptjs
-- **Testing**: Jest & Supertest
-- **Containerization**: Docker & Docker Compose
-- **Orchestration**: Kubernetes
-- **CI/CD**: GitHub Actions
-- **Cloud & Serverless**: AWS Lambda, SES, CloudFormation
+## ⚙️ Setup Instructions
 
-## Setup Instructions
+### 1. Prerequisites
+- Node.js (v18+ recommended)
+- Docker and Docker Compose
 
-### Prerequisites
-- Node.js v18+
-- Docker & Docker Compose
-- Git
+### 2. Local Setup
 
-### Local Development Setup
-\```bash
-git clone https://github.com/yourusername/kanban-board-devops.git
-cd kanban-board-app/backend
+**Step 1:** Clone or unzip the repository.
+
+**Step 2:** Navigate to backend and install dependencies:
+```bash
+cd backend
 npm install
+```
+
+**Step 3:** Set up MongoDB with Docker:
+```bash
 docker-compose up -d
+```
+
+**Step 4:** Run the backend application:
+```bash
 npm run dev
-\```
+```
 
-Open `http://localhost:5000` in your browser to verify.
+Access the backend at: `http://localhost:5000`
 
-## Environment Variables
-\```
+## 📌 Environment Variables (.env)
+```
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/kanban_board
 JWT_SECRET=your_secret_key_here
-\```
+```
 
-## CI/CD Pipeline
-CI/CD workflow configuration is provided in `.github/workflows/`.
+## 🧪 Testing
+Unit and integration tests will be added using Jest and Supertest.
 
-## Kubernetes Deployment
-Kubernetes manifests located in the `infra/kubernetes/` directory.
+## 📦 Docker Compose
+Currently configured to start a local MongoDB instance for development.
 
-## Serverless Notifications
-AWS Lambda and SES used for automated email notifications.
+---
 
-## Contributing
-Feel free to fork, make changes, and create pull requests.
-
-## License
-[MIT](LICENSE)
+## 🚨 Additional Notes
+- Expand the routes, controllers, and models according to project specifications.
+- CI/CD pipeline, Kubernetes setup, and serverless functions can be integrated in further stages.
